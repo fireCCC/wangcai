@@ -23,6 +23,7 @@ const Nav = () => {
         <NavWrapper>
             <ul>
                 <li>
+                <img src={x} alt=""/>
                 <Link to="/tags">标签</Link>
                 </li>
                 <li>
