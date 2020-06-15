@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import x from 'icons/money.svg';
-
-console.log(x);
+import Icon from './Icon';
 
 const NavWrapper = styled.nav`
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
@@ -13,7 +11,17 @@ const NavWrapper = styled.nav`
     > li {
       width: 33.3333%;
       text-align: center;
-      padding: 16px;
+      padding: 4px 0;
+      > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 `;
@@ -23,14 +31,22 @@ const Nav = () => {
         <NavWrapper>
             <ul>
                 <li>
-                <img src={x} alt=""/>
-                <Link to="/tags">标签</Link>
+                  <Link to="/tags">
+                  <Icon name="tag"></Icon>
+                  标签
+                  </Link>
                 </li>
                 <li>
-                <Link to="/money">记账</Link>
+                  <Link to="/money">
+                  <Icon name="money"></Icon>
+                  记账
+                  </Link>
                 </li>
                 <li>
-                <Link to="/statistics">统计</Link>
+                  <Link to="/statistics">
+                  <Icon name="chart"></Icon>
+                  统计
+                  </Link>
                 </li>
             </ul>
         </NavWrapper>
