@@ -3,6 +3,7 @@ import Nav from './Nav';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  background-image:url('${require('../icons/background.png')}');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,12 +16,12 @@ const Main = styled.div`
 
 const Layout = (props: any) => {
     return (
-      <Wrapper>
-        <Main>
-          {props.children}
-        </Main>
-        <Nav />
-      </Wrapper>
+        <Wrapper>
+            <Main>
+                {props.children}
+            </Main>
+            <Nav />
+        </Wrapper>
     )
 }
 

@@ -3,9 +3,9 @@ import Layout from '../components/Layout';
 
 function Tags() {
     return (
-      <Layout>
-        <h2>标签</h2>
-      </Layout>
+        <Layout>
+            <h2>标签</h2>
+        </Layout>
     );
 }
 
